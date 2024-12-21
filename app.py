@@ -11,7 +11,7 @@ def home():
 
 @app.route('/download')
 def download_resume():
-    return send_file('resume_sadananda.pdf', as_attachment=True)
+    return send_file('resume_sadananda.pdf', as_attachment=True,mimetype='application/pdf')
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))
